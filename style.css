@@ -1,0 +1,57 @@
+/* CSS reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+
+.game-container {
+    position: relative;
+}
+
+.game, .row {
+    display: flex;
+    gap: 5px;
+}
+
+.game {
+    flex-direction: column;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    display: grid;
+    place-content: center;
+    outline: 1px solid black;
+    font-size: 6rem;
+}
+
+.announcer {
+    text-align: center;
+    font-size: 6rem;
+}
+
+.winning-line-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.active {
+    display: block;
+}
