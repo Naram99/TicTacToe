@@ -10,6 +10,8 @@ class Game {
         this.winningLineCt = document.querySelector(".winning-line-container");
         this.winningLineCt.classList.remove("active")
 
+        this.winningLine = document.querySelector(".winning-line")
+
         this.announcerUpdate(this.activePlayer);
         
         this.eventListenerCreation(".square");
@@ -28,7 +30,7 @@ class Game {
                 if(check) {
                     this.announcerUpdate(this.activePlayer, " won.")
                     this.winningLinePlacement(check);
-                    
+                    console.log(check);
                 } else {
                     this.roundCounter++;
                     //console.log(this.winCheck());
@@ -50,7 +52,7 @@ class Game {
                 if(checkedSquares[0].innerHTML === checkedSquares[1].innerHTML 
                     && checkedSquares[0].innerHTML === checkedSquares[2].innerHTML
                     && checkedSquares[0].innerHTML !== "")
-                    return true;
+                    return trio;
             }
         }
         return false;
@@ -63,6 +65,38 @@ class Game {
 
     winningLinePlacement(line) {
         this.winningLineCt.classList.add("active");
+        switch (line) {
+            case ".dia-1":
+                this.winningLine.style.transform = "rotate(45deg)";
+                break;
+
+            case ".dia-2":
+                this.winningLine.style.transform = "rotate(135deg)";
+                break;
+                
+            case ".col-1":
+                this.winningLine.style.transform = "translateX(-205px) rotate(90deg)";
+                break;
+
+            case ".col-2":
+                this.winningLine.style.transform = "rotate(90deg)";
+                break;
+
+            case ".col-3":
+                this.winningLine.style.transform = "translateX(205px) rotate(90deg)";
+                break;
+
+            case ".row-1":
+                this.winningLine.style.transform = "translateY(-205px)";
+                break;
+
+            case ".row-3":
+                this.winningLine.style.transform = "translateY(205px)";
+                break;
+        
+            default:
+                break;
+        }
     }
 }
 

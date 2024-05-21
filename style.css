@@ -52,6 +52,12 @@
     z-index: 10;
 }
 
+.winning-line {
+    border: 5px solid black;
+    width: 500px;
+}
+
 .active {
-    display: block;
+    display: grid;
+    place-content: center;
 }
