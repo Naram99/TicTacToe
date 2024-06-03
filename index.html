@@ -13,8 +13,21 @@
                 <div class="announcer-container">
                     <div class="announcer">TicTacToe</div>
                 </div>
+                <!-- <div class="scoreboard-container">
+                    <div class="scoreboard">
+                        <div class="scoreboard-player">X</div>
+                        <div class="Xscore">0</div>
+                        <div class="dash">-</div>
+                        <div class="Oscore">0</div>
+                        <div class="scoreboard-player">O</div>
+                    </div>
+                </div> -->
                 <div class="game-container">
-                    <div class="game">
+                    <label for="player-x-name player-label">Player X name:</label>
+                    <input type="text" name="player-x-name" id="player-x-name" class="player-input" required />
+                    <label for="player-o-name player-label">Player O name:</label>
+                    <input type="text" name="player-o-name" id="player-o-name" class="player-input" required />
+                    <!-- <div class="game">
                         <div class="row">
                             <div class="square col-1 row-1 dia-1"></div>
                             <div class="square col-2 row-1"></div>
@@ -33,11 +46,14 @@
                     </div>
                     <div class="winning-line-container">
                         <div class="winning-line"></div>
-                    </div>
+                    </div> -->
+                </div> 
+                <div class="new-game-button-container">
+                    <button class="new-game-button active" type="submit">New Game</button>
                 </div>
             </div>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
