@@ -13,47 +13,24 @@
                 <div class="announcer-container">
                     <div class="announcer">TicTacToe</div>
                 </div>
-                <!-- <div class="scoreboard-container">
-                    <div class="scoreboard">
-                        <div class="scoreboard-player">X</div>
-                        <div class="Xscore">0</div>
-                        <div class="dash">-</div>
-                        <div class="Oscore">0</div>
-                        <div class="scoreboard-player">O</div>
-                    </div>
-                </div> -->
                 <div class="game-container">
                     <label for="player-x-name player-label">Player X name:</label>
                     <input type="text" name="player-x-name" id="player-x-name" class="player-input" required />
                     <label for="player-o-name player-label">Player O name:</label>
                     <input type="text" name="player-o-name" id="player-o-name" class="player-input" required />
-                    <!-- <div class="game">
-                        <div class="row">
-                            <div class="square col-1 row-1 dia-1"></div>
-                            <div class="square col-2 row-1"></div>
-                            <div class="square col-3 row-1 dia-2"></div>
-                        </div>
-                        <div class="row">
-                            <div class="square col-1 row-2"></div>
-                            <div class="square col-2 row-2 dia-1 dia-2"></div>
-                            <div class="square col-3 row-2"></div>
-                        </div>
-                        <div class="row">
-                            <div class="square col-1 row-3 dia-2"></div>
-                            <div class="square col-2 row-3"></div>
-                            <div class="square col-3 row-3 dia-1"></div>
-                        </div>
-                    </div>
+                    <label for="best-of">Best of </label>
+                    <input type="number" name="best-of" id="best-of" min="1" max="10" value="1" required />
                     <div class="winning-line-container">
                         <div class="winning-line"></div>
-                    </div> -->
+                    </div>
                 </div> 
                 <div class="new-game-button-container">
-                    <button class="new-game-button active" type="submit">New Game</button>
+                    <button class="new-game-button active" type="submit">Start Game</button>
+                    <button class="next-round-button">Next Round</button>
                 </div>
             </div>
         </div>
     </main>
-    <script src="game.js"></script>
+    <script type="module" src="./src/index.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 }
 
 .main-container {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: grid;
     place-content: center;
@@ -17,6 +17,8 @@
 
 .game-container {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .game, .row {
@@ -40,11 +42,19 @@
 .announcer {
     text-align: center;
     font-size: 6rem;
+    text-wrap: wrap;
+    height: auto;
+}
+
+.scoreboard-container {
+    display: grid;
+    place-content: center;
 }
 
 .scoreboard {
     display: flex;
     justify-content: space-between;
+    min-width: 610px;
     font-size: 4rem;
     padding-block: 2rem;
 }
@@ -67,12 +77,17 @@
 .new-game-button-container {
     height: 50px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.new-game-button {
+.new-game-button,
+.next-round-button {
     display: none;
     height: 100%;
     width: 100%;
+    max-width: 610px;
+    text-align: center;
     border: none;
     background-color: black;
     color: white;
@@ -80,7 +95,8 @@
     transition: all 0.3s ease;
 }
 
-.new-game-button:hover {
+.new-game-button:hover,
+.next-round-button:hover {
     background-color: gray;
     color: black;
 }
