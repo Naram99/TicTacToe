@@ -59,6 +59,7 @@ export class Round {
                         this.winningLine.activate(check);
                         resolve(this.activePlayer);
                     } else if (!check && this.roundCounter === 9){
+                        this.announcer.say("tie")
                         resolve("Tie")
                     } else {
                         this.roundCounter++;
